@@ -1,0 +1,32 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: 373434f8d95128c90e1f
+            client-secret: e4f886451dcdfe33b9672c96ef4f1b52faf5a46f
+  application:
+    name: ${APPLICATION_NAME:products-api}
+  jackson:
+    mapper:
+      ACCEPT_CASE_INSENSITIVE_ENUMS: true
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQLDialect
+      format_sql: false
+  datasource:
+    url: 'jdbc:mysql://localhost:3306/products-stock?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC'
+    username: root
+    password: teste123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+api:
+  security:
+    token:
+      secret: ThisIsAJWTSecret
